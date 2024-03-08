@@ -1,6 +1,9 @@
 import React from "react";
 import "../css/NavigationMenu.css";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import { GiKnifeFork } from "react-icons/gi";
 
 export default function NavigationMenu() {

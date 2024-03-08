@@ -1,0 +1,31 @@
+.bsr-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.card-body {
+  flex: 1;
+  background-color: #e6e6e6;
+}
+
+.card-text {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 20;
+  -webkit-box-orient: vertical;
+}
+
+.listgroup-text {
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  background-color: #333333;
+}
+
+.imgSize {
+  object-fit: none;
+}

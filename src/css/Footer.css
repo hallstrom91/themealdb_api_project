@@ -1,3 +1,7 @@
-.FooterText {
+.footer-text {
   color: whitesmoke;
+}
+
+.footer-body {
+  padding-top: 5%;
 }
