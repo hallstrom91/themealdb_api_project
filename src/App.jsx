@@ -1,16 +1,17 @@
 import { React, useState } from "react";
-
 import "./App.css";
 import NavigationMenu from "./components/NavigationMenu";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
+import Switch from "./Switch";
 
 function App() {
   return (
     <>
-      <NavigationMenu />
-      <Home />
-      <Footer />
+      <div>
+        <NavigationMenu />
+        <Switch />
+        <Footer />
+      </div>
     </>
   );
 }

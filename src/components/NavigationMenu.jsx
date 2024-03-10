@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/NavigationMenu.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import NavbarCollapse from "react-bootstrap/NavbarCollapse";
 import { GiKnifeFork } from "react-icons/gi";
+
+import SerachInput from "./SearchInput";
 
 export default function NavigationMenu() {
   return (
@@ -17,26 +21,28 @@ export default function NavigationMenu() {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand href="#" className="NavText">
+          <Navbar.Brand href="#" className="NavText playfair-display-700">
             MealDB <GiKnifeFork size={30} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsiv-navbar" />
           <Navbar.Collapse id="responsiv-navbar">
             <Nav className="me-auto ">
-              <Nav.Link href="#" className="NavText">
-                Hem
-              </Nav.Link>
-              <Nav.Link href="#" className="NavText">
-                Kategorier
-              </Nav.Link>
-              <Nav.Link href="#" className="NavText">
-                Om Oss
-              </Nav.Link>
+              <Link to="/" className="NavText playfair-display-400">
+                Home
+              </Link>
+              <Link to="/categorylist" className="NavText playfair-display-400">
+                Categories
+              </Link>
+              <Link to="/about" className="NavText playfair-display-400">
+                About
+              </Link>
+              <Link to="/login" className="NavText playfair-display-400">
+                Login
+              </Link>
             </Nav>
-            <Nav>
-              <Nav.Link href="#" className="NavText">
-                Logga In
-              </Nav.Link>
+
+            <Nav className="pt-2 pb-2">
+              <SerachInput />
             </Nav>
           </Navbar.Collapse>
         </Container>

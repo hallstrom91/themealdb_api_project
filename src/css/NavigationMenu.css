@@ -1,3 +1,7 @@
 .NavText {
   color: whitesmoke;
+  text-decoration: none;
+  display: flex;
+  padding: 5px;
+  align-items: center;
 }

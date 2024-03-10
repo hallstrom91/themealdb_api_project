@@ -1,0 +1,20 @@
+.card-header-title {
+  text-align: center;
+  border: transparent;
+  background-color: white;
+}
+
+.list-group-image {
+  border: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-group-item {
+  border: transparent;
+}
+
+.placeholder {
+  color: #212529;
+}

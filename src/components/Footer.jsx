@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Footer.css";
+import { GiKnifeFork } from "react-icons/gi";
 import { Nav, Navbar, NavbarBrand } from "react-bootstrap";
 
 export default function Footer() {
@@ -10,10 +11,9 @@ export default function Footer() {
       <div className="footer-body">
         <Navbar bg="dark" data-bs-theme="dark">
           <NavbarBrand className="mx-auto footer-text">
-            {year} &copy; MealDB{" "}
-          </NavbarBrand>
-          <NavbarBrand className="mx-auto footer-text">
-            Thanks To: {DB_API}
+            <p>
+              {year} &copy; MealDB <GiKnifeFork size={30} />
+            </p>
           </NavbarBrand>
         </Navbar>
       </div>

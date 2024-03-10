@@ -1,0 +1,24 @@
+.col-one-home {
+  text-align: center;
+  color: whitesmoke;
+  background-color: #212529;
+  border-radius: 10px;
+}
+
+.col-two-home {
+  align-items: center;
+  justify-content: center;
+}
+
+.col-three-home {
+  align-items: center;
+  justify-content: center;
+}
+
+.h3-header-home {
+  text-align: center;
+}
+
+.h1-header-home {
+  padding-top: 5px;
+}

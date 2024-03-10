@@ -15,17 +15,26 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 20;
+  -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
 }
 
+.listgroup-body {
+  border-radius: 10px;
+}
+
 .listgroup-text {
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
   color: white;
-  background-color: #333333;
+  background-color: #212529;
 }
 
 .imgSize {
   object-fit: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
