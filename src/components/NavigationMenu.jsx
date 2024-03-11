@@ -21,9 +21,11 @@ export default function NavigationMenu() {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand href="#" className="NavText playfair-display-700">
-            MealDB <GiKnifeFork size={30} />
-          </Navbar.Brand>
+          <Link to="/">
+            <Navbar.Brand className="NavText playfair-display-700">
+              MealDB <GiKnifeFork size={30} />
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsiv-navbar" />
           <Navbar.Collapse id="responsiv-navbar">
             <Nav className="me-auto ">
@@ -50,5 +52,3 @@ export default function NavigationMenu() {
     </>
   );
 }
-
-/* nav justify-content-end flex-grow-1 pe-3 */

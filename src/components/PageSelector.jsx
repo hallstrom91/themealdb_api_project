@@ -1,7 +1,7 @@
 import React from "react";
 import Pagination from "react-bootstrap/Pagination";
 
-export default function PaginationItem({
+export default function PageSelector({
   currentPage,
   allItems,
   itemsDisplay,

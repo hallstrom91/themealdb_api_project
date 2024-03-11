@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../css/Home.css";
 import { fetchData } from "../FetchData";
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import CardRandom from "../components/CardRandom";
-import Badge from "react-bootstrap/Badge";
+import CardHome from "../components/CardHome";
 import { GiKnifeFork } from "react-icons/gi";
 
 export default function Home() {
@@ -29,6 +29,7 @@ export default function Home() {
       <Container>
         <div className="p-4">
           <Row>
+            {/* Homepage Welcome Header */}
             <Col sm={true} className="col-one-home" id="random-meal">
               <h1 className="h1-header-home playfair-display-900 ">
                 <GiKnifeFork /> Welcome to MealDB <GiKnifeFork />
@@ -36,7 +37,8 @@ export default function Home() {
             </Col>
           </Row>
           <Row>
-            <Col lg={10} className="pt-4 col-two-home">
+            {/* Homepage Random Text */}
+            <Col lg={9} className="pt-4 col-two-home">
               <h3 className="h3-header-home playfair-display-400">
                 Explore the World of Food
               </h3>
@@ -78,20 +80,23 @@ export default function Home() {
                 next culinary masterpiece awaits!
               </p>
             </Col>
-            <Col lg={2} className="pt-4 col-three-home">
+            {/* Todays Suggestions (api random request) Card */}
+            <Col lg={3} className="pt-4 col-three-home">
               <h3 className="h3-header-home playfair-display-400">
                 Todays Suggestion
               </h3>
               {randomMeal.map((suggestion) => (
                 <div key={suggestion.idMeal}>
-                  <CardRandom
-                    key={suggestion.idMeal}
-                    randomTitle={suggestion.strMeal}
-                    randomImage={suggestion.strMealThumb}
-                    randomImgAlt={suggestion.strMeal}
-                    randomCategory={suggestion.strCategory}
-                    randomYoutube={suggestion.strYoutube}
-                  />
+                  <Link to={`/recipe/${suggestion.idMeal}`}>
+                    <CardHome
+                      key={suggestion.idMeal}
+                      title={suggestion.strMeal}
+                      image={suggestion.strMealThumb}
+                      imgAlt={suggestion.strMeal}
+                      category={suggestion.strCategory}
+                      youtube={suggestion.strYoutube}
+                    />
+                  </Link>
                 </div>
               ))}
             </Col>

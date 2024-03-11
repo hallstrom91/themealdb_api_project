@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import CategoryItems from "./pages/CategoryItems";
 import MealRecipe from "./pages/MealRecipe";
+import SearchResult from "./pages/SearchResults";
 
 export default function Switch() {
   return (
@@ -18,6 +19,7 @@ export default function Switch() {
         <Route path="/login" element={<Login />} />
         <Route path="/category/:strCategory" Component={CategoryItems} />
         <Route path="/recipe/:mealId" Component={MealRecipe} />
+        <Route path="/search" element={<SearchResult />} />
       </Routes>
     </>
   );

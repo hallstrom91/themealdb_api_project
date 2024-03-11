@@ -4,28 +4,24 @@ import ListGroup from "react-bootstrap/ListGroup";
 import "../css/CardCategories.css";
 import { ImYoutube2 } from "react-icons/im";
 
-export default function CardRandom({
-  randomTitle,
-  randomImage,
-  randomImgAlt,
-  randomCategory,
-  randomYoutube,
+export default function CardContainer({
+  title,
+  image,
+  imgAlt,
+  category,
+  youtube,
 }) {
   return (
     <>
       <Card className="mb-2 bsr-card playfair-display-400">
-        <Card.Img variant="top" src={randomImage} alt={randomImgAlt} />
+        <Card.Img variant="top" src={image} alt={imgAlt} />
         <Card.Body className="card-body">
           <ListGroup className="listgroup-body">
-            <ListGroup.Item className="listgroup-text">
-              {randomTitle}
-            </ListGroup.Item>
+            <ListGroup.Item className="listgroup-text">{title}</ListGroup.Item>
           </ListGroup>
+          <Card.Text className="card-text">Category: {category}</Card.Text>
           <Card.Text className="card-text">
-            Category: {randomCategory}
-          </Card.Text>
-          <Card.Text className="card-text">
-            <a href={randomYoutube} target="_blank">
+            <a href={youtube} target="_blank">
               <ImYoutube2 size={50} color="red" />
               {""} Watch Tutorial
             </a>

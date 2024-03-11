@@ -1,25 +1,27 @@
 import React from "react";
+import "../css/Experiment.css";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
+import Placeholder from "react-bootstrap/Placeholder";
+import Stack from "react-bootstrap/Stack";
+import Container from "react-bootstrap/Container";
 
-import "../css/CardCategories.css";
-
-export default function CardCategories({ title, image, imgAlt }) {
+export default function CardCategories({ title, image, description }) {
   return (
     <>
-      <Card className="mb-2 bsr-card">
-        <Card.Img variant="top" src={image} alt={imgAlt} className="imgSize" />
-        <Card.Body className="card-body">
-          <ListGroup className="listgroup-body">
-            <ListGroup.Item className="listgroup-text playfair-display-400">
-              {title}
-            </ListGroup.Item>
-          </ListGroup>
-          {/* <Card.Text className="card-text">{description}</Card.Text> */}
-        </Card.Body>
-      </Card>
+      <div className="p-4">
+        {/*  data-bs-theme = dark? fix  card text? */}
+        <Card bg="dark" data-bs-theme="dark">
+          <Card.Header className="text-center">{title}</Card.Header>
+          <Card.Body>
+            <Stack direction="horizontal">
+              <Image src={`${image}`} className="" fluid rounded />
+              <Card.Text className="text-dark ">{description}</Card.Text>
+            </Stack>
+          </Card.Body>
+        </Card>
+      </div>
     </>
   );
 }

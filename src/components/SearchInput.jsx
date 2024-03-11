@@ -1,21 +1,38 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
+import { useNavigate } from "react-router-dom";
 
-export default function SerachInput() {
+export default function SerachInput({ findSearch }) {
+  const [searchInput, setSearchInput] = useState("");
+  const navigate = useNavigate();
+
+  const newSearch = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search?query=${searchInput}`);
+    /* Clear searchInput Field after submit */
+    setSearchInput("");
+  };
+
   return (
     <>
       <Container>
-        <Form className="d-flex ">
+        <Form className="d-flex" onSubmit={handleSubmit}>
           <Form.Control
             type="search"
-            placeholder="Search"
+            placeholder="Beef, Chicken, Cake..."
+            value={searchInput}
+            onChange={newSearch}
             className="me-2"
             size="sm"
             aria-label="Search"
           />
-          <Button variant="outline-success" size="sm">
+          <Button variant="outline-success" size="sm" type="submit">
             Search
           </Button>
         </Form>
