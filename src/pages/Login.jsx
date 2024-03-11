@@ -1,40 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
-
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Form from "react-bootstrap/Form";
+import LoginContainer from "../components/LoginContainer";
+import RegisterContainer from "../components/RegisterLogin";
 
 export default function Login() {
+  const [isRegister, setIsRegister] = useState(false);
+
+  const handleToggle = () => {
+    setIsRegister((prevMode) => !prevMode);
+  };
+
   return (
     <>
-      <h1>Login</h1>
-      <Container>
+      <Container className="p-4">
         <Row className="d-flex justify-content-center">
           {/* User Login Container */}
           <Col sm={6} md={4} className="">
-            {/* Username */}
-            <FloatingLabel
-              controlId="floatingInputUser"
-              label="Username"
-              className="m-2"
-            >
-              <Form.Control type="user" placeholder="Username" />
-            </FloatingLabel>
-            {/* Password */}
-            <FloatingLabel
-              controlId="floatingInputPassword"
-              label="Password"
-              className="m-2 "
-            >
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                className="border-2 border-black"
-              />
-            </FloatingLabel>
+            {isRegister ? (
+              <RegisterContainer toggleLogin={handleToggle} />
+            ) : (
+              <LoginContainer toggleRegister={handleToggle} />
+            )}
           </Col>
         </Row>
       </Container>

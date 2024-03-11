@@ -39,11 +39,12 @@ export default function CategoryItems() {
 
   return (
     <>
-      <Container className="p-4">
+      <Container className="p-4 playfair-display-400">
         {/* Category Items Header */}
-        <div className="text-center pt-2 playfair-display-400">
+        <div className="text-center pt-2">
           <h1>{strCategory}</h1>
         </div>
+
         {/* Display Categories with CardCategories Component */}
         <div className="p-4">
           <Row xl={3} lg={2} md={1} sm={1} xs={1}>

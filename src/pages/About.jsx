@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/About.css";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -8,11 +7,11 @@ export default function About() {
   return (
     <>
       <Container>
-        <div className="p-4">
+        <div className="p-4 playfair-display-400">
           <Row>
             <Col sm={true}>
-              <h1 className="h1-header-about playfair-display-700">About Us</h1>
-              <div className="about-info-text">
+              <h1 className="text-center playfair-display-700">About Us</h1>
+              <div className=" pt-2 ">
                 <p>
                   We are not just a group of food enthusiasts; we're a family of
                   flavor fanatics, a tribe of taste explorers, and a collective
@@ -51,8 +50,8 @@ export default function About() {
               </div>
             </Col>
             <Col sm={true}>
-              <h1 className="h1-header-about playfair-display-700">
-                Consider donating your fortune to US!
+              <h1 className="text-center playfair-display-700">
+                Become a Member!
               </h1>
             </Col>
           </Row>

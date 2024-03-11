@@ -33,8 +33,8 @@ export default function Categories() {
   return (
     <>
       {/* experiment.jsx display of categories */}
-      <Container className="p-4">
-        <div className="text-center pt-2 playfair-display-400">
+      <Container className="p-4 playfair-display-400">
+        <div className="text-center pt-2">
           {/* Category Header */}
           <h1>Categories</h1>
         </div>
