@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Stack from "react-bootstrap/Stack";
+import FormControl from "react-bootstrap/FormControl";
+import "../css/InputElement.css";
 
 export default function LoginContainer({ toggleRegister }) {
   return (
@@ -17,22 +19,22 @@ export default function LoginContainer({ toggleRegister }) {
         <Card.Header className="text-center ">
           <h3>Login</h3>
         </Card.Header>
-        <Card.Body bg="light">
+        <Card.Body data-bs-theme="light" className="text-black">
           {/* Username */}
-          <FloatingLabel
-            controlId="user"
-            label="Username"
-            bg="light"
-            className="m-2 secondary"
-          >
-            <Form.Control type="user" placeholder="Username" />
+          <FloatingLabel controlId="user" label="Username" className="m-2">
+            {/* form control border-focus? fix? */}
+            <Form.Control
+              type="text"
+              placeholder="Username"
+              className="input"
+            />
           </FloatingLabel>
           {/* Password */}
           <FloatingLabel controlId="password" label="Password" className="m-2 ">
             <Form.Control
               type="password"
               placeholder="Password"
-              className="border-2 success"
+              className="custom-input"
             />
           </FloatingLabel>
           <div className="d-flex">

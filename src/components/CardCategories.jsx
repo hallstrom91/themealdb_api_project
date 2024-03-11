@@ -16,7 +16,8 @@ export default function CardCategories({ title, image, description }) {
           <Card.Body>
             <Stack direction="horizontal">
               <Image src={`${image}`} className="" fluid rounded />
-              <Card.Text className="text-dark">{description}</Card.Text>
+              {/* CardText Margin?? */}
+              <Card.Text className="text-dark m-6">{description}</Card.Text>
             </Stack>
           </Card.Body>
         </Card>
