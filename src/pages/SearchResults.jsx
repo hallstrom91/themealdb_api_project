@@ -83,30 +83,3 @@ export default function SearchResults() {
     </>
   );
 }
-
-/* } */
-
-/* OLD CODE BELOW */
-/*       <Container>
-        <h1 className="">Search Results for {query}</h1>
-        {searchResults && searchResults.length > 0 ? (
-          <div>
-            {searchResults.map((result) => (
-              <ul key={result.idMeal}>
-                <Link to={`/recipe/${result.idMeal}`}>
-                  <ListGroups
-                    key={result.idMeal}
-                    image={result.strMealThumb}
-                    imgAlt={result.strMeal}
-                    title={result.strMeal}
-                    description={result.strCategory}
-                  />
-                  {/* <li key={result.idMeal}>{result.strMeal}</li> */
-/*       </Link>
-              </ul> */
-/*          ))} */
-/*           </div>
-        ) : (
-          <p>No Results found... </p>
-        )}
-      </Container> */
