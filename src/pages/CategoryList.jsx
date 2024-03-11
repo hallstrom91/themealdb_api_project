@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../css/Categories.css";
 import { fetchData } from "../FetchData";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";

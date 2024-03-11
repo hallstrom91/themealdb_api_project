@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/NavigationMenu.css";
 import Container from "react-bootstrap/Container";
@@ -11,6 +11,15 @@ import { GiKnifeFork } from "react-icons/gi";
 import SerachInput from "./SearchInput";
 
 export default function NavigationMenu() {
+  const [open, setOpen] = useState(false);
+
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
+  const handleClick = () => {
+    setOpen(false);
+  };
   return (
     <>
       <Navbar
@@ -19,6 +28,7 @@ export default function NavigationMenu() {
         bg="dark"
         data-bs-theme="dark"
         sticky="top"
+        expanded={open}
       >
         <Container>
           <Link to="/">
@@ -26,19 +36,38 @@ export default function NavigationMenu() {
               MealDB <GiKnifeFork size={30} />
             </Navbar.Brand>
           </Link>
-          <Navbar.Toggle aria-controls="responsiv-navbar" />
-          <Navbar.Collapse id="responsiv-navbar">
+          <Navbar.Toggle
+            aria-controls="responsiv-navbar"
+            onClick={handleToggle}
+          />
+          <Navbar.Collapse id="responsiv-navbar" onSelect={handleToggle}>
             <Nav className="me-auto ">
-              <Link to="/" className="NavText playfair-display-400">
+              <Link
+                to="/"
+                className="NavText playfair-display-400"
+                onClick={handleClick}
+              >
                 Home
               </Link>
-              <Link to="/categorylist" className="NavText playfair-display-400">
+              <Link
+                to="/categorylist"
+                className="NavText playfair-display-400"
+                onClick={handleClick}
+              >
                 Categories
               </Link>
-              <Link to="/about" className="NavText playfair-display-400">
+              <Link
+                to="/about"
+                className="NavText playfair-display-400"
+                onClick={handleClick}
+              >
                 About
               </Link>
-              <Link to="/login" className="NavText playfair-display-400">
+              <Link
+                to="/login"
+                className="NavText playfair-display-400"
+                onClick={handleClick}
+              >
                 Login
               </Link>
             </Nav>

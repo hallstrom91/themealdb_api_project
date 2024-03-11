@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/Experiment.css";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Image from "react-bootstrap/Image";
@@ -17,7 +16,7 @@ export default function CardCategories({ title, image, description }) {
           <Card.Body>
             <Stack direction="horizontal">
               <Image src={`${image}`} className="" fluid rounded />
-              <Card.Text className="text-dark ">{description}</Card.Text>
+              <Card.Text className="text-dark">{description}</Card.Text>
             </Stack>
           </Card.Body>
         </Card>

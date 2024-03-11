@@ -25,6 +25,7 @@ export default function SerachInput({ findSearch }) {
         <Form className="d-flex" onSubmit={handleSubmit}>
           <Form.Control
             type="search"
+            id="Search"
             placeholder="Beef, Chicken, Cake..."
             value={searchInput}
             onChange={newSearch}

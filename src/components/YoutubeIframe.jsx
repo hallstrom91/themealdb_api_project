@@ -1,9 +1,16 @@
 import React from "react";
 
 function getEmbedLink(youtubeLink) {
-  const youtubeId = youtubeLink ? youtubeLink.split("v=")[1] : [];
-  const embedLink = `https://www.youtube.com/embed/${youtubeId}`;
-  return embedLink;
+  try {
+    const url = new URL(youtubeLink);
+    const params = new URLSearchParams(url.search);
+    const youtubeId = params.get("v");
+    const embedLink = `https://www.youtube.com/embed/${youtubeId}`;
+    return embedLink;
+  } catch (error) {
+    console.error("Error constructing URL", error);
+    return null;
+  }
 }
 
 export default function YoutubeIframe({ youtubeLink }) {

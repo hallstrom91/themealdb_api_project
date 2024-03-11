@@ -1,7 +1,9 @@
 import React from "react";
 import "../css/Footer.css";
 import { GiKnifeFork } from "react-icons/gi";
-import { Nav, Navbar, NavbarBrand } from "react-bootstrap";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavbarBrand from "react-bootstrap/NavbarBrand";
 
 export default function Footer() {
   const year = new Date().getFullYear();
