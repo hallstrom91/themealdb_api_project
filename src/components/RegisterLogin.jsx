@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Stack from "react-bootstrap/Stack";
+import "../css/InputElement.css";
 
 export default function RegisterContainer({ toggleLogin }) {
   //broken login function - ongoing project
@@ -26,15 +27,19 @@ export default function RegisterContainer({ toggleLogin }) {
         <Card.Header className="text-center">
           <h3>Register</h3>
         </Card.Header>
-        <Card.Body bg="light">
+        <Card.Body data-bs-theme="light" className="text-black">
           {/* Register - Name*/}
-          {/*           <FloatingLabel
+          <FloatingLabel
             controlId="newName"
             label="Name"
             className="m-2 secondary"
           >
-            <Form.Control type="text" placeholder="Name" />
-          </FloatingLabel> */}
+            <Form.Control
+              type="text"
+              placeholder="Name"
+              className="custom-input"
+            />
+          </FloatingLabel>
           {/* Register - Username */}
           <FloatingLabel
             controlId="newUser"
@@ -44,6 +49,7 @@ export default function RegisterContainer({ toggleLogin }) {
             <Form.Control
               type="text"
               placeholder="Username"
+              className="custom-input"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -52,27 +58,28 @@ export default function RegisterContainer({ toggleLogin }) {
           <FloatingLabel
             controlId="newPassword"
             label="New Password"
-            className="m-2 "
+            className="m-2"
           >
             <Form.Control
               type="password"
               placeholder="New Password"
+              className="custom-input"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </FloatingLabel>
           {/* Register - Repeat New Password */}
-          {/*      <FloatingLabel
+          <FloatingLabel
             controlId="repeatPassword"
             label="Repeat Password "
-            className="m-2 "
+            className="m-2"
           >
             <Form.Control
               type="password"
               placeholder="New Password"
-              className="border-2 success"
+              className="custom-input"
             />
-          </FloatingLabel> */}
+          </FloatingLabel>
           {/* Submit Button  */}
           <div className="d-flex">
             <Button

@@ -1,11 +1,8 @@
-/* NOT WORKING */
-.input::form-control:hover {
-  border: none;
+.custom-input:focus {
+  border-color: black !important;
+  box-shadow: 0 0 0 0.3rem #5f5f5f !important;
 }
 
-/* WORKS BUT NOT PERFECT, FIX*/
-.custom-input.form-control:focus {
-  outline: none !important;
-  border-color: black;
-  box-shadow: none !important;
+.custom-button {
+  border-color: #0490ec !important;
 }

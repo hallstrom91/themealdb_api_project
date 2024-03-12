@@ -7,10 +7,13 @@ import Stack from "react-bootstrap/Stack";
 import FormControl from "react-bootstrap/FormControl";
 import "../css/InputElement.css";
 
+import { useLocation } from "react-router-dom";
+
 export default function LoginContainer({ toggleRegister }) {
   return (
     <>
       {/* Login Container Header */}
+
       <Card
         bg="dark"
         data-bs-theme="dark"
@@ -21,14 +24,16 @@ export default function LoginContainer({ toggleRegister }) {
         </Card.Header>
         <Card.Body data-bs-theme="light" className="text-black">
           {/* Username */}
+
           <FloatingLabel controlId="user" label="Username" className="m-2">
             {/* form control border-focus? fix? */}
             <Form.Control
               type="text"
               placeholder="Username"
-              className="input"
+              className="custom-input"
             />
           </FloatingLabel>
+
           {/* Password */}
           <FloatingLabel controlId="password" label="Password" className="m-2 ">
             <Form.Control
@@ -42,12 +47,13 @@ export default function LoginContainer({ toggleRegister }) {
               Login
             </Button>
           </div>
+
           {/* Footer - Go to Register (Btn) */}
           <Card.Footer className="d-flex justify-content-end">
             <Stack direction="horizontal">
               <Button
                 size="md"
-                className="m-2"
+                className="m-2 custom-button"
                 variant="dark"
                 onClick={toggleRegister}
               >

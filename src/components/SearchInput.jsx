@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router-dom";
 
-export default function SerachInput({ findSearch }) {
+export default function SerachInput({ findSearch, toggleClose }) {
   const [searchInput, setSearchInput] = useState("");
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ export default function SerachInput({ findSearch }) {
 
   return (
     <>
-      <Container>
+      <Container className="playfair-display-400">
         <Form className="d-flex" onSubmit={handleSubmit}>
           <Form.Control
             type="search"
@@ -33,7 +33,12 @@ export default function SerachInput({ findSearch }) {
             size="sm"
             aria-label="Search"
           />
-          <Button variant="outline-success" size="sm" type="submit">
+          <Button
+            variant="outline-success"
+            size="sm"
+            type="submit"
+            onClick={toggleClose}
+          >
             Search
           </Button>
         </Form>

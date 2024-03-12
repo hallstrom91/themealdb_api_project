@@ -30,9 +30,9 @@ export default function NavigationMenu() {
         sticky="top"
         expanded={open}
       >
-        <Container>
+        <Container className="playfair-display-400">
           <Link to="/">
-            <Navbar.Brand className="NavText playfair-display-700">
+            <Navbar.Brand className="p-2 text-white playfair-display-700">
               MealDB <GiKnifeFork size={30} />
             </Navbar.Brand>
           </Link>
@@ -42,40 +42,35 @@ export default function NavigationMenu() {
           />
           <Navbar.Collapse id="responsiv-navbar" onSelect={handleToggle}>
             <Nav className="me-auto ">
-              <Link
-                to="/"
-                className="NavText playfair-display-400"
-                onClick={handleClick}
-              >
+              <Link to="/" className="p-2 text-white " onClick={handleClick}>
                 Home
               </Link>
               <Link
                 to="/categorylist"
-                className="NavText playfair-display-400"
+                className="p-2 text-white"
                 onClick={handleClick}
               >
                 Categories
               </Link>
               <Link
                 to="/about"
-                className="NavText playfair-display-400"
+                className="p-2 text-white"
                 onClick={handleClick}
               >
                 About
               </Link>
               <Link
                 to="/login"
-                className="NavText playfair-display-400"
+                className="p-2 text-white"
                 onClick={handleClick}
               >
                 Login
               </Link>
             </Nav>
-
-            <Nav className="pt-2 pb-2">
-              <SerachInput />
-            </Nav>
           </Navbar.Collapse>
+          <Nav className="m-2 p-2">
+            <SerachInput toggleClose={handleClick} />
+          </Nav>
         </Container>
       </Navbar>
     </>
