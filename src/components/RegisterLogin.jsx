@@ -7,13 +7,33 @@ import Stack from "react-bootstrap/Stack";
 import "../css/InputElement.css";
 
 export default function RegisterContainer({ toggleLogin }) {
-  //broken login function - ongoing project
+  //register function connected to server.js in root-folder
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
+
   //broken login function - ongoing project
-  const handleRegister = () => {
-    const newUser = { username, password };
-    const updatedUsers = [...users, newUser];
+  const handleRegister = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.message || "Registration failed");
+      }
+      setUsername("");
+      setPassword("");
+      setSuccessMsg("Registration Successful.");
+      setTimeout(() => setSuccessMsg(""), 5000);
+    } catch (error) {
+      setError(error.message || "Server error with registration.");
+      console.error("trouble with login.");
+      setTimeout(() => setError(""), 5000);
+    }
   };
 
   return (
@@ -29,7 +49,7 @@ export default function RegisterContainer({ toggleLogin }) {
         </Card.Header>
         <Card.Body data-bs-theme="light" className="text-black">
           {/* Register - Name*/}
-          <FloatingLabel
+          {/*           <FloatingLabel
             controlId="newName"
             label="Name"
             className="m-2 secondary"
@@ -39,7 +59,7 @@ export default function RegisterContainer({ toggleLogin }) {
               placeholder="Name"
               className="custom-input"
             />
-          </FloatingLabel>
+          </FloatingLabel> */}
           {/* Register - Username */}
           <FloatingLabel
             controlId="newUser"
@@ -69,7 +89,7 @@ export default function RegisterContainer({ toggleLogin }) {
             />
           </FloatingLabel>
           {/* Register - Repeat New Password */}
-          <FloatingLabel
+          {/*           <FloatingLabel
             controlId="repeatPassword"
             label="Repeat Password "
             className="m-2"
@@ -79,7 +99,7 @@ export default function RegisterContainer({ toggleLogin }) {
               placeholder="New Password"
               className="custom-input"
             />
-          </FloatingLabel>
+          </FloatingLabel> */}
           {/* Submit Button  */}
           <div className="d-flex">
             <Button
@@ -90,6 +110,10 @@ export default function RegisterContainer({ toggleLogin }) {
             >
               Register
             </Button>
+          </div>
+          <div className="d-flex">
+            {successMsg && <p className="text-success">{successMsg}</p>}
+            {error && <p className="text-danger">Registration failed.</p>}
           </div>
           {/* Footer - Go to Login (Btn) */}
           <Card.Footer className="d-flex justify-content-end">

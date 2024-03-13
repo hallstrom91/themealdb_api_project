@@ -65,7 +65,7 @@ export default function MealRecipe() {
                   className="text-center playfair-display-400"
                   border="dark"
                 >
-                  Ingridients
+                  Ingridients & measurement
                 </Card.Header>
               </Card>
               {/* Ingredient Map and Display Function */}

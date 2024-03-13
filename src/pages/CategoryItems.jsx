@@ -16,6 +16,14 @@ export default function CategoryItems() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsDisplay = 6;
 
+  /* PageSelector Settings */
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const idxLastItem = (currentPage - 1) * itemsDisplay + itemsDisplay;
+  const idxFirstItem = idxLastItem - itemsDisplay;
+  const activeitems = categoryItems
+    ? categoryItems.slice(idxFirstItem, idxLastItem)
+    : [];
+
   /* API CALL */
   useEffect(() => {
     const fetchCategoryItems = async () => {
@@ -28,14 +36,6 @@ export default function CategoryItems() {
     };
     fetchCategoryItems();
   }, [strCategory]);
-
-  /* PageSelector Settings */
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const idxLastItem = (currentPage - 1) * itemsDisplay + itemsDisplay;
-  const idxFirstItem = idxLastItem - itemsDisplay;
-  const activeitems = categoryItems
-    ? categoryItems.slice(idxFirstItem, idxLastItem)
-    : [];
 
   return (
     <>
