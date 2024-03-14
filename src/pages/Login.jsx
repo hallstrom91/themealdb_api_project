@@ -10,20 +10,17 @@ import UserPage from "./UserPage";
 export default function Login() {
   const [isRegister, setIsRegister] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [usernameDisplay, setUsernameDisplay] = useState("");
 
   const handleToggle = () => {
     setIsRegister((prevMode) => !prevMode);
   };
 
-  const handleLoginSuccess = (usernameDisplay) => {
+  const handleLoginSuccess = () => {
     setIsLoggedIn(true);
-    setUsernameDisplay(usernameDisplay);
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
-    setUsername("");
   };
 
   return (
@@ -33,7 +30,7 @@ export default function Login() {
           {/* User Login Container */}
           <Col sm={6} md={4} className="">
             {isLoggedIn ? (
-              <UserPage username={username} onLogout={handleLogout} />
+              <UserPage onLogout={handleLogout} />
             ) : isRegister ? (
               <RegisterContainer toggleLogin={handleToggle} />
             ) : (
