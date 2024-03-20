@@ -28,7 +28,7 @@ export default function Login() {
       <Container className="p-4">
         <Row className="d-flex justify-content-center">
           {/* User Login Container */}
-          <Col sm={6} md={4} className="">
+          <Col sm={6} md={4}>
             {isLoggedIn ? (
               <UserPage onLogout={handleLogout} />
             ) : isRegister ? (

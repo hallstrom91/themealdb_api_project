@@ -7,7 +7,6 @@ import NavbarBrand from "react-bootstrap/NavbarBrand";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const DB_API = "The Meal DB API";
   return (
     <>
       <div className="footer-body">

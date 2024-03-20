@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
@@ -6,8 +7,6 @@ import Form from "react-bootstrap/Form";
 import Stack from "react-bootstrap/Stack";
 import FormControl from "react-bootstrap/FormControl";
 import "../css/InputElement.css";
-
-import { useLocation } from "react-router-dom";
 
 export default function LoginContainer({ toggleRegister, onLoginSuccess }) {
   //login function connected to server.js in root-folder

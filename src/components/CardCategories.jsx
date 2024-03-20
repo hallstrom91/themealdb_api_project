@@ -10,13 +10,11 @@ export default function CardCategories({ title, image, description }) {
   return (
     <>
       <div className="p-4">
-        {/*  data-bs-theme = dark? fix  card text? */}
         <Card bg="dark" data-bs-theme="dark">
           <Card.Header className="text-center">{title}</Card.Header>
           <Card.Body>
             <Stack direction="horizontal">
               <Image src={`${image}`} className="" fluid rounded />
-              {/* CardText Margin?? */}
               <Card.Text className="text-dark m-6">{description}</Card.Text>
             </Stack>
           </Card.Body>
