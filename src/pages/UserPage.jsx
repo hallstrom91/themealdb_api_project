@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
+import { Container, Button } from "react-bootstrap";
 
 export default function UserPage({ onLogout }) {
   return (

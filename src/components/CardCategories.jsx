@@ -1,10 +1,12 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import Image from "react-bootstrap/Image";
-import Placeholder from "react-bootstrap/Placeholder";
-import Stack from "react-bootstrap/Stack";
-import Container from "react-bootstrap/Container";
+import {
+  Card,
+  ListGroup,
+  Image,
+  Placeholder,
+  Stack,
+  Container,
+} from "react-bootstrap";
 
 export default function CardCategories({ title, image, description }) {
   return (

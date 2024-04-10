@@ -1,6 +1,5 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
+import { Card, ListGroup } from "react-bootstrap";
 import "../css/CardCategories.css";
 import { ImYoutube2 } from "react-icons/im";
 

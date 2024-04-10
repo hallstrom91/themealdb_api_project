@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/Home.css";
 import { fetchData } from "../FetchData";
 import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Container, Col, Row } from "react-bootstrap";
 import CardHome from "../components/CardHome";
 import { GiKnifeFork } from "react-icons/gi";
 

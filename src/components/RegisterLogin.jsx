@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Form from "react-bootstrap/Form";
-import Stack from "react-bootstrap/Stack";
+import { Card, Button, FloatingLabel, Form, Stack } from "react-bootstrap";
 import "../css/InputElement.css";
 
 export default function RegisterContainer({ toggleLogin }) {
@@ -48,19 +44,6 @@ export default function RegisterContainer({ toggleLogin }) {
           <h3>Register</h3>
         </Card.Header>
         <Card.Body data-bs-theme="light" className="text-black">
-          {/* Register - Name*/}
-          {/*           <FloatingLabel
-            controlId="newName"
-            label="Name"
-            className="m-2 secondary"
-          >
-            <Form.Control
-              type="text"
-              placeholder="Name"
-              className="custom-input"
-            />
-          </FloatingLabel> */}
-          {/* Register - Username */}
           <FloatingLabel
             controlId="newUser"
             label="Username"
@@ -88,19 +71,6 @@ export default function RegisterContainer({ toggleLogin }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </FloatingLabel>
-          {/* Register - Repeat New Password */}
-          {/*           <FloatingLabel
-            controlId="repeatPassword"
-            label="Repeat Password "
-            className="m-2"
-          >
-            <Form.Control
-              type="password"
-              placeholder="New Password"
-              className="custom-input"
-            />
-          </FloatingLabel> */}
-          {/* Submit Button  */}
           <div className="d-flex">
             <Button
               size="md"

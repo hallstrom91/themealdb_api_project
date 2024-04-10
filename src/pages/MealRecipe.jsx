@@ -3,12 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchData } from "../FetchData";
 import { Link } from "react-router-dom";
 import YoutubeIframe from "../components/YoutubeIframe";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
+import { Container, Col, Row, Image, Card, ListGroup } from "react-bootstrap";
 
 export default function MealRecipe() {
   const { mealId } = useParams();

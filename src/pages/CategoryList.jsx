@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../FetchData";
 import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Badge from "react-bootstrap/Badge";
-import Stack from "react-bootstrap/Stack";
+import { Container, Col, Row, Badge, Stack } from "react-bootstrap";
 import PageSelector from "../components/PageSelector";
 import CardCategories from "../components/CardCategories";
 /* import my own category descriptions  */
@@ -20,6 +16,7 @@ import { LuBeef } from "react-icons/lu";
 import { LuVegan } from "react-icons/lu";
 // Chicken
 import { GiChicken } from "react-icons/gi";
+import { FaRoad } from "react-icons/fa";
 
 export default function Categories() {
   const [categories, setCategories] = useState([]);

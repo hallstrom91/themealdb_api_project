@@ -1,6 +1,6 @@
 import React from "react";
 
-/* old code gives error but works */
+/* works but gives errors */
 function getEmbedLink(youtubeLink) {
   try {
     const url = new URL(youtubeLink);
@@ -13,24 +13,6 @@ function getEmbedLink(youtubeLink) {
     return null;
   }
 }
-
-/* function getEmbedLink(youtubeLink) {
-  try {
-    console.log("YoutubeLink:", youtubeLink);
-    const url = new URL(youtubeLink);
-    const params = new URLSearchParams(url.search);
-    const youtubeId = params.get("v") || params.get("list");
-
-    if (!youtubeId) {
-      throw new Error("Invalid URL or missing ID.");
-    }
-    const embedLink = `https://www.youtube.com/embed/${youtubeId}`;
-    return embedLink;
-  } catch (error) {
-    console.error("Error constructing URL.");
-    return null;
-  }
-} */
 
 export default function YoutubeIframe({ youtubeLink }) {
   const embedLink = getEmbedLink(youtubeLink);

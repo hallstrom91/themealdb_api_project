@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchData } from "../FetchData";
 import { Link } from "react-router-dom";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+import { Col, Row, Container } from "react-bootstrap";
 import CardCategories from "../components/CardCategories";
 import PageSelector from "../components/PageSelector";
 
