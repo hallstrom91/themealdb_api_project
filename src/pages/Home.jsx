@@ -13,7 +13,6 @@ export default function Home() {
     const fetchRandomMeal = async () => {
       try {
         const data = await fetchData("random.php");
-        console.log(data);
         setRandomMeal(data.meals);
       } catch (error) {
         console.error("Error fetchin random meal suggestion", error);
@@ -29,7 +28,7 @@ export default function Home() {
           {/* Homepage Welcome Header */}
           <Col sm={true} className="col-one-home" id="random-meal">
             <h1 className="pt-1 playfair-display-900 ">
-              <GiKnifeFork /> Welcome to MealDB <GiKnifeFork />
+              <GiKnifeFork /> Welcome to MealRadar <GiKnifeFork />
             </h1>
           </Col>
         </Row>
@@ -39,24 +38,25 @@ export default function Home() {
           <Col lg={9} className="pt-4 col-two-home">
             <h3 className="text-center">Explore the World of Food</h3>
             <p className="m-3">
-              Embark on a delightful journey of flavors and aromas with MealDB,
-              your ultimate destination for culinary inspiration. Whether you're
-              a seasoned chef or a kitchen novice, our extensive collection of
-              mouthwatering recipes is here to spark your creativity and satisfy
-              your taste buds.
+              Embark on a delightful journey of flavors and aromas with
+              MealRadar, your ultimate destination for culinary inspiration.
+              Whether you're a seasoned chef or a kitchen novice, our extensive
+              collection of mouthwatering recipes is here to spark your
+              creativity and satisfy your taste buds.
             </p>
             <p className="m-3">
-              At MealDB, we curate a diverse selection of recipes from around
+              At MealRadar, we curate a diverse selection of recipes from around
               the world, each meticulously crafted to bring joy to your dining
               table. From savory mains to delectable desserts, our recipes are
               designed to suit every palate and occasion.
             </p>
             <p className="m-3">
-              Featuring a daily special handpicked just for you, MealDB offers a
-              tantalizing glimpse into the world of gastronomy. Discover new and
-              exciting dishes with our "Dish of the Day" recommendations sourced
-              from TheMealDB API. Each day brings a unique culinary adventure,
-              ensuring you never run out of delightful surprise
+              Featuring a daily special handpicked just for you, MealRadar
+              offers a tantalizing glimpse into the world of gastronomy.
+              Discover new and exciting dishes with our "Dish of the Day"
+              recommendations sourced from TheMealDB API. Each day brings a
+              unique culinary adventure, ensuring you never run out of
+              delightful surprise
             </p>
             <p className="m-3">
               Feel free to explore our recipe categories, where you'll find an
@@ -65,13 +65,13 @@ export default function Home() {
               create unforgettable meals in the comfort of your own kitchen.
             </p>
             <p className="m-3">
-              MealDB is not just a recipe hub; it's a community of food
+              MealRadar is not just a recipe hub; it's a community of food
               enthusiasts sharing the joy of cooking. Join us on this
               gastronomic expedition, and let the aroma of delicious creations
               fill your home.
             </p>
             <p className="m-3">
-              Get ready to elevate your cooking experience with MealDB. Your
+              Get ready to elevate your cooking experience with MealRadar. Your
               next culinary masterpiece awaits!
             </p>
           </Col>

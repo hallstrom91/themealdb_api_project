@@ -3,7 +3,10 @@ import React from "react";
 /* works but gives errors */
 function getEmbedLink(youtubeLink) {
   try {
-    const url = new URL(youtubeLink);
+    let url = "";
+    if (youtubeLink) {
+      url = new URL(youtubeLink, youtubeLink);
+    }
     const params = new URLSearchParams(url.search);
     const youtubeId = params.get("v");
     const embedLink = `https://www.youtube.com/embed/${youtubeId}`;

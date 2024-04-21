@@ -49,7 +49,7 @@ export default function About() {
             </Col>
             <Col sm={true}>
               <h1 className="text-center playfair-display-700">
-                Become a Member!
+                This project is built with the API from TheMealDB.com
               </h1>
             </Col>
           </Row>

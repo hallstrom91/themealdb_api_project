@@ -11,8 +11,9 @@ export default function Footer() {
         <Navbar bg="dark" data-bs-theme="dark">
           <NavbarBrand className="mx-auto footer-text">
             <p>
-              {year} &copy; MealDB <GiKnifeFork size={30} />
+              {year} &copy; MealRadar <GiKnifeFork size={30} />
             </p>
+            <p>kjsportfolio.se</p>
           </NavbarBrand>
         </Navbar>
       </div>

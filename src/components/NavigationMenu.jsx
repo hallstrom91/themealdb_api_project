@@ -36,7 +36,7 @@ export default function NavigationMenu() {
         <Container className="playfair-display-400">
           <Link to="/">
             <Navbar.Brand className="p-2 text-white playfair-display-700">
-              MealDB <GiKnifeFork size={30} />
+              MealRadar <GiKnifeFork size={30} />
             </Navbar.Brand>
           </Link>
           <Navbar.Toggle
@@ -61,13 +61,6 @@ export default function NavigationMenu() {
                 onClick={handleClick}
               >
                 About
-              </Link>
-              <Link
-                to="/login"
-                className="p-2 text-white"
-                onClick={handleClick}
-              >
-                Login
               </Link>
             </Nav>
           </Navbar.Collapse>

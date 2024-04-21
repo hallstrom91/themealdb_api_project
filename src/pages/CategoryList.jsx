@@ -38,7 +38,6 @@ export default function Categories() {
     const fetchAllCategories = async () => {
       try {
         const data = await fetchData("categories.php");
-        console.log(data);
         setCategories(data.categories);
       } catch (error) {
         console.error("Error fetching categories", error);
