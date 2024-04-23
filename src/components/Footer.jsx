@@ -10,10 +10,12 @@ export default function Footer() {
       <div className="footer-body">
         <Navbar bg="dark" data-bs-theme="dark">
           <NavbarBrand className="mx-auto footer-text">
-            <p>
+            <p className="px-2">
               {year} &copy; MealRadar <GiKnifeFork size={30} />
             </p>
-            <p>kjsportfolio.se</p>
+            <a href="https://kjsportfolio.se" className="text-white">
+              <p>Made by kjsportfolio.se</p>
+            </a>
           </NavbarBrand>
         </Navbar>
       </div>
